@@ -7,13 +7,23 @@
     <div>
       <h2>Click on your favorite animal:</h2>
     </div>
-    <div>
+    <div class="images">
       <mat-card *ngFor="let image of images; let i = index"
-                class="picture"
+                class="image"
                 tabindex="{{i + 2}}"
-                (click)="chooseImage(image)"
-                (keyup.enter)="chooseImage(image)">
+                (click)="selectImage(image)"
+                (keyup.enter)="selectImage(image)">
           <img src="../assets/images/{{image}}.png">
+      </mat-card>
+    </div>
+  </div>
+  <div id="selected" *ngIf="selectedImage">
+    <h2>Your favorite animal is:</h2>
+    <div id="favorite">
+      <mat-card>
+        <mat-card-content>
+          <img src="../assets/images/{{selectedImage}}.png" class="selectedImage">
+        </mat-card-content>
       </mat-card>
     </div>
   </div>
