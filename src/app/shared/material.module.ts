@@ -20,7 +20,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { OverlayModule } from '@angular/cdk/overlay';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSortModule } from '@angular/material/sort';
@@ -49,7 +48,6 @@ const modules = [
     MatSlideToggleModule,
     MatButtonToggleModule,
     MatTabsModule,
-    OverlayModule,
     MatProgressSpinnerModule,
     MatTableModule,
     MatSortModule
