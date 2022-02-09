@@ -27,6 +27,9 @@ export class AppComponent implements OnInit{
     this.router.queryParams
       .subscribe(params => {
         this.selectedImage = params?.image ?? ('../assets/images/unknown.png');
+        if (params.comment) {
+          this.addCommentValue(params.comment);
+        }
       });
   }
 
@@ -35,7 +38,11 @@ export class AppComponent implements OnInit{
   }
 
   addComment(commentElement: HTMLInputElement) {
-    this.commentsValue += commentElement.value + '\n';
+    this.addCommentValue(commentElement.value);
     commentElement.value = '';
+  }
+
+  addCommentValue(comment: string) {
+    this.commentsValue +=  comment + '\n';
   }
 }
