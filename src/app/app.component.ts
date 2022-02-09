@@ -14,11 +14,11 @@ export class AppComponent implements OnInit{
   images: string[];
   selectedImage: string;
   comment: string;
-  commentsValue: string;
+  comments: string[];
 
   constructor(private router: ActivatedRoute) {
     this.comment = '';
-    this.commentsValue = '';
+    this.comments = [];
   }
 
   ngOnInit() {
@@ -27,9 +27,7 @@ export class AppComponent implements OnInit{
     this.router.queryParams
       .subscribe(params => {
         this.selectedImage = params?.image ?? ('../assets/images/unknown.png');
-        if (params.comment) {
-          this.addCommentValue(params.comment);
-        }
+        this.addCommentValue(params.comment);
       });
   }
 
@@ -43,6 +41,8 @@ export class AppComponent implements OnInit{
   }
 
   addCommentValue(comment: string) {
-    this.commentsValue +=  comment + '\n';
+    if (comment) {
+      this.comments.push(comment);
+    }
   }
 }

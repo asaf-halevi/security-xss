@@ -1,6 +1,4 @@
-<html>
-<body>
-  <div class="mainBackground">
+<div class="mainBackground">
     <div>
       <h1>Bob's Sweet Images Site</h1>
     </div>
@@ -15,23 +13,23 @@
           <img src="../assets/images/{{image}}.png">
       </mat-card>
     </div>
-  </div>
-  <div id="selected" *ngIf="selectedImage">
-    <h2>Your favorite animal is:</h2>
-    <div id="favorite">
-      <mat-card>
-        <mat-card-content>
-          <img src="{{selectedImage}}" class="selectedImage">
-        </mat-card-content>
-      </mat-card>
+    <div id="selected" *ngIf="selectedImage">
+      <h2>Your favorite animal is:</h2>
+      <div id="favorite">
+        <mat-card>
+          <mat-card-content>
+            <img src="{{selectedImage}}" class="selectedImage">
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="commentsDiv">
+        <h2>Please write a nice comment here</h2>
+        <input type="text" formControlName="comment" id="comment" ref-comment/>
+        <mat-card id="addComment" class="addComment" (click)="addComment(comment)">Add Comment</mat-card>
+        <h2>Read all comments</h2>
+        <div id="comments" readonly>
+          <div *ngFor="let comment of comments">{{comment}}<br/></div>
+        </div>
     </div>
   </div>
-  <div class="commentsDiv">
-      <h2>Please write a nice comment here</h2>
-      <input type="text" formControlName="comment" id="comment" ref-comment/>
-      <mat-card id="addComment" class="addComment" (click)="addComment(comment)">Add Comment</mat-card>
-      <h2>Read all comments</h2>
-      <div id="comments" readonly>{{commentsValue}}<script>alert(1)</script></div>
-  </div>
-</body>
-</html>
