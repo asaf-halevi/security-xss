@@ -11,8 +11,7 @@
       <mat-card *ngFor="let image of images; let i = index"
                 class="image"
                 tabindex="{{i + 2}}"
-                (click)="selectImage(image)"
-                (keyup.enter)="selectImage(image)">
+                (click)="selectImage('../assets/images/' + image + '.png')">
           <img src="../assets/images/{{image}}.png">
       </mat-card>
     </div>
@@ -22,7 +21,7 @@
     <div id="favorite">
       <mat-card>
         <mat-card-content>
-          <img src="../assets/images/{{selectedImage}}.png" class="selectedImage">
+          <img src="{{selectedImage}}" class="selectedImage">
         </mat-card-content>
       </mat-card>
     </div>

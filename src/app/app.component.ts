@@ -20,13 +20,11 @@ export class AppComponent implements OnInit{
 
     this.router.queryParams
       .subscribe(params => {
-        console.log(params);
         this.selectedImage = params.image;
-        console.log(this.selectedImage);
       });
   }
 
   selectImage(image: string){
-    this.selectedImage = image;
+    window.location.href = 'http://localhost:4200/?image=' + image;
   }
 }
