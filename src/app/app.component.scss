@@ -15,19 +15,23 @@ h2 {
 
 .image{
   cursor: grabbing;
+  max-width: 128px;
+  max-height: 128px;
 
   &:hover {
     border: 2px solid;
     border-color: #3c91e6;
     border-radius: 5px;
+    max-width: 124px;
+    max-height: 124px;
   }
 }
 
 .selectedImage{
   border: 3px solid gold;
   border-radius: 5px;
-  width: 128px;
-  height: 128px;
+  max-width: 128px;
+  max-height: 128px;
 }
 
 .images{
