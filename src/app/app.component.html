@@ -26,5 +26,12 @@
       </mat-card>
     </div>
   </div>
+  <div class="commentsDiv">
+      <h2>Please write a nice comment here</h2>
+      <input type="text" formControlName="comment" id="comment" ref-comment/>
+      <mat-card id="addComment" class="addComment" (click)="addComment(comment)">Add Comment</mat-card>
+      <h2>Read all comments</h2>
+      <textarea id="comments" readonly>{{commentsValue}}</textarea>
+  </div>
 </body>
 </html>

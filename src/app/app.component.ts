@@ -13,8 +13,12 @@ export class AppComponent implements OnInit{
   title = 'Bob\'s sweet images';
   images: string[];
   selectedImage: string;
+  comment: string;
+  commentsValue: string;
 
   constructor(private router: ActivatedRoute) {
+    this.comment = '';
+    this.commentsValue = '';
   }
 
   ngOnInit() {
@@ -28,5 +32,10 @@ export class AppComponent implements OnInit{
 
   selectImage(image: string){
     window.location.href = AppComponent.imagePrefix + image;
+  }
+
+  addComment(commentElement: HTMLInputElement) {
+    this.commentsValue += commentElement.value + '\n';
+    commentElement.value = '';
   }
 }
