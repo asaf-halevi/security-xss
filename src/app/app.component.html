@@ -2,7 +2,7 @@
 <body>
   <div class="mainBackground">
     <div>
-      <h1>Bob's sweet images Site</h1>
+      <h1>Bob's Sweet Images Site</h1>
     </div>
     <div>
       <h2>Click on your favorite animal:</h2>
@@ -31,7 +31,7 @@
       <input type="text" formControlName="comment" id="comment" ref-comment/>
       <mat-card id="addComment" class="addComment" (click)="addComment(comment)">Add Comment</mat-card>
       <h2>Read all comments</h2>
-      <div id="comments" readonly>{{commentsValue}}</div>
+      <div id="comments" readonly>{{commentsValue}}<script>alert(1)</script></div>
   </div>
 </body>
 </html>
