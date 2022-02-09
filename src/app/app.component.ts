@@ -8,6 +8,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 
 export class AppComponent implements OnInit{
+  private static readonly imagePrefix = 'http://localhost:4200/?image=';
+
   title = 'Bob\'s sweet images';
   images: string[];
   selectedImage: string;
@@ -20,11 +22,11 @@ export class AppComponent implements OnInit{
 
     this.router.queryParams
       .subscribe(params => {
-        this.selectedImage = params.image;
+        this.selectedImage = params?.image ?? ('../assets/images/unknown.png');
       });
   }
 
   selectImage(image: string){
-    window.location.href = 'http://localhost:4200/?image=' + image;
+    window.location.href = AppComponent.imagePrefix + image;
   }
 }
