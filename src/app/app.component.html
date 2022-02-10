@@ -10,7 +10,7 @@
                 class="image"
                 tabindex="{{i + 2}}"
                 (click)="selectImage('../assets/images/' + image + '.png')">
-          <img src="../assets/images/{{image}}.png">
+          <img src="../assets/images/{{image}}.png" alt="image of {{image}}">
       </mat-card>
     </div>
     <div id="selected" *ngIf="selectedImage">
@@ -18,14 +18,14 @@
       <div id="favorite">
         <mat-card>
           <mat-card-content>
-            <img src="{{selectedImage}}" class="selectedImage">
+            <img src="{{selectedImage}}" class="selectedImage" alt="selected image">
           </mat-card-content>
         </mat-card>
       </div>
     </div>
     <div class="commentsDiv">
         <h2>Please write a nice comment here</h2>
-        <input type="text" formControlName="comment" id="comment" ref-comment/>
+        <input type="text" id="comment" ref-comment/>
         <mat-card id="addComment" class="addComment" (click)="addComment(comment)">Add Comment</mat-card>
         <h2>Read all comments</h2>
         <div id="comments" readonly>
