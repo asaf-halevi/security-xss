@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   comment: string;
   comments: string[];
 
-  constructor(private router: ActivatedRoute) {
+  constructor(private readonly router: ActivatedRoute) {
     this.comment = '';
     this.comments = [];
   }
@@ -67,12 +67,12 @@ export class AppComponent implements OnInit {
     return result
   }
 
-  decodeHex(value: string): string {
-    let hexes = value.match(/.{1,4}/g) || [];
-    let back = "";
-    for (let j = 0; j < hexes.length; j++) {
-      back += String.fromCharCode(parseInt(hexes[j], 16));
-    }
-    return back;
-  }
+  // decodeHex(value: string): string {
+  //   let hexes = value.match(/.{1,4}/g) || [];
+  //   let back = "";
+  //   for (let j = 0; j < hexes.length; j++) {
+  //     back += String.fromCharCode(parseInt(hexes[j], 16));
+  //   }
+  //   return back;
+  // }
 }
