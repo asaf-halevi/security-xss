@@ -32,4 +32,8 @@
           <div *ngFor="let comment of comments">{{comment}}<br/></div>
         </div>
     </div>
+    <div id="encoding">
+      <mat-card id="urlEncoder" class="addEncodedComment" (click)="addCommentWithUrlEncoder(comment)">URL Encoder</mat-card>
+      <mat-card id="hexEncoder" class="addEncodedComment" (click)="addCommentWithUrlEncoder2(comment)">Hex Encoder</mat-card>
+    </div>
   </div>
