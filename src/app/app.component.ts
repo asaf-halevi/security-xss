@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.images = ['sheep', 'butterfly', 'frog', 'dog', 'cat', 'spider', 'bear'];
+    this.images = ['sheep', 'butterfly', 'frog', 'dog', 'cat', 'spider', 'bear', 'rabbit', 'kuala', 'hedgehog'];
 
     this.router.queryParams
       .subscribe(params => {
