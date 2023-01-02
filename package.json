@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@angular-builders/jest": "^11.1.1",
-    "@angular-devkit/build-angular": "^13.2.4",
+    "@angular-devkit/build-angular": "^13.3.10",
     "@angular-eslint/builder": "2.0.2",
     "@angular-eslint/eslint-plugin": "2.0.2",
     "@angular-eslint/eslint-plugin-template": "2.0.2",
@@ -57,7 +57,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-typescript": "^3.0.0",
-    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-import": "^2.25.4",
     "fast-glob": "^3.2.7",
     "fs-extra": "^9.1.0",
     "gzipper": "^5.0.0",
